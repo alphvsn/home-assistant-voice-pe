@@ -1515,7 +1515,7 @@ voice_kit:
 external_components:
   - source:
       type: git
-      url: https://github.com/esphome/home-assistant-voice-pe
+      url: https://github.com/alphvsn/home-assistant-voice-pe
       ref: dev
     components:
       - micro_wake_word
@@ -1533,12 +1533,12 @@ audio_dac:
 micro_wake_word:
   id: mww
   models:
-    - model: https://github.com/kahrendt/microWakeWord/releases/download/okay_nabu_20241226.3/okay_nabu.json
-      id: okay_nabu
-    - model: hey_jarvis
-      id: hey_jarvis
-    - model: hey_mycroft
-      id: hey_mycroft
+    # - model: https://github.com/kahrendt/microWakeWord/releases/download/okay_nabu_20241226.3/okay_nabu.json
+    #  id: okay_nabu
+    # - model: hey_jarvis
+    #  id: hey_jarvis
+    # - model: hey_mycroft
+    #  id: hey_mycroft
     - model: https://github.com/kahrendt/microWakeWord/releases/download/stop/stop.json
       id: stop
       internal: true
@@ -1581,8 +1581,9 @@ voice_assistant:
   id: va
   microphone: asr_mic
   media_player: external_media_player
-  micro_wake_word: mww
-  use_wake_word: false
+  # micro_wake_word: mww
+  # use_wake_word: false
+  use_wake_word: true
   noise_suppression_level: 0
   auto_gain: 0 dbfs
   volume_multiplier: 1
